@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
+<h1>Artists Projects</h1>
 
 <table>
   <thead>
@@ -22,11 +22,11 @@
         <td><%= project.date_created %></td>
         <td><%= project.info %></td>
         <td><%= project.location %></td>
-        <td><%= project.video_url %></td>
-        <td><%= project.image %></td>
+        <td><iframe src="https://www.youtube.com/embed/<%= project.video_url%>" frameborder="0" width = "140" height="80"></iframe></td>
+        <td><img scr="<%= project.image%>" height ="50"/></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -35,3 +35,4 @@
 <br>
 
 <%= link_to 'New Project', new_project_path %>
+

@@ -22,13 +22,16 @@
 
 <p>
   <strong>Video url:</strong>
-  <%= @project.video_url %>
+  <br>
+  <iframe src="https://www.youtube.com/embed/<%= @project.video_url%>" frameborder="0" width = "560" height="315"></iframe>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= @project.image %>
+  <br>
+  <img scr="<%= @project.image%>" height ="200" width="200"/>
 </p>
+
 
 <p>
   <strong>Style:</strong>

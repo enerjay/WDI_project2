@@ -17,6 +17,9 @@
     <%= link_to "Login", new_user_session_path%>
     <%= link_to "Sign up", new_user_registration_path%>
   <%end%>
+  <p><%= link_to "home", root_path %></p>
+  <p><%= link_to "Artists", users_path %></p>
+  <p><%= link_to "Projects", projects_path %></p>
 
   <%= yield %>
 
