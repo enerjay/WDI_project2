@@ -6,7 +6,6 @@ one:
   bio: MyText
   email: MyString
   profile_image: MyString
-  website: MyString
 
 two:
   username: MyString
@@ -14,4 +13,3 @@ two:
   bio: MyText
   email: MyString
   profile_image: MyString
-  website: MyString

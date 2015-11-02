@@ -2,33 +2,33 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @upload.name %>
+  <%= @project.name %>
 </p>
 
 <p>
   <strong>Date created:</strong>
-  <%= @upload.date_created %>
+  <%= @project.date_created %>
 </p>
 
 <p>
   <strong>Info:</strong>
-  <%= @upload.info %>
+  <%= @project.info %>
 </p>
 
 <p>
   <strong>Location:</strong>
-  <%= @upload.location %>
+  <%= @project.location %>
 </p>
 
 <p>
   <strong>Video url:</strong>
-  <%= @upload.video_url %>
+  <%= @project.video_url %>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= @upload.image %>
+  <%= @project.image %>
 </p>
 
-<%= link_to 'Edit', edit_upload_path(@upload) %> |
-<%= link_to 'Back', uploads_path %>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

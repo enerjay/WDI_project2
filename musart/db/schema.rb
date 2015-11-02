@@ -11,9 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102103151) do
+ActiveRecord::Schema.define(version: 20151102111510) do
 
-  create_table "uploads", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.string   "date_created"
     t.text     "info"
@@ -30,7 +33,6 @@ ActiveRecord::Schema.define(version: 20151102103151) do
     t.text     "bio"
     t.string   "email"
     t.string   "profile_image"
-    t.string   "website"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
