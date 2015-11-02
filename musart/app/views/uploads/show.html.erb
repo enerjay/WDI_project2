@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @upload.name %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @upload.date_created %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @upload.info %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @upload.location %>
+</p>
+
+<p>
+  <strong>Video url:</strong>
+  <%= @upload.video_url %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @upload.image %>
+</p>
+
+<%= link_to 'Edit', edit_upload_path(@upload) %> |
+<%= link_to 'Back', uploads_path %>
