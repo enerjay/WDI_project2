@@ -31,7 +31,8 @@
   </div>
   <div class="field">
     <%= f.label :video_url %><br>
-    <%= f.text_area :video_url %>
+    <%= f.text_field :video_url %>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video_url %>" frameborder="0" allowfullscreen></iframe>
   </div>
   <div class="field">
     <%= f.label :image %><br>
@@ -41,12 +42,13 @@
     <%= f.label :styles %><br>
     <%= f.select(:style, Project::STYLES) %>
   </div>
+  
   <div class="field">
     <%= f.label :categories %><br>
     <%= f.select(:category, Project::CATEGORIES) %>
   </div>
   
-  <br>
+  <br></br>
   <div class="actions">
     <%= f.submit %>
   </div>
