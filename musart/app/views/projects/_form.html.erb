@@ -1,3 +1,5 @@
+
+
 <%= form_for(@project) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
@@ -35,6 +37,9 @@
     <%= f.label :image %><br>
     <%= f.text_field :image %>
   </div>
+  <%= Project::STYLES %>
+  <%= Project::CATEGORIES %>
+  <br></br>
   <div class="actions">
     <%= f.submit %>
   </div>
