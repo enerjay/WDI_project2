@@ -3,12 +3,12 @@ Rails.application.routes.draw do
   resources :projects
   resources :users
 
-  root "static#home"
+  root "users#index"
     
     
     get "Projects", to: "projects#index"
 
-    get "Users", to: "users#index"
+  
 
    
 

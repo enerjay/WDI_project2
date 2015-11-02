@@ -25,5 +25,16 @@
   <%= @user.profile_image %>
 </p>
 
+<p>
+  <strong>Projects:</strong>
+  <%= @user.projects.each do |project| %>
+
+  <% end %>
+</p>
+
+
+
+<%= link_to 'current Projects', projects_path %> |
+<%= link_to 'Add Project', new_project_path %> |
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
