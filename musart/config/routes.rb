@@ -3,14 +3,10 @@ Rails.application.routes.draw do
   resources :projects
   resources :users
 
-  root "users#index"
+  root "static#home"
     
-    
-    get "Projects", to: "projects#index"
-
-  
-
-   
+  get "Projects", to: "projects#index"
+  get "Users", to: "users#index" 
 
 
   # The priority is based upon order of creation: first created -> highest priority.
