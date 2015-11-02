@@ -37,9 +37,16 @@
     <%= f.label :image %><br>
     <%= f.text_field :image %>
   </div>
-  <%= Project::STYLES %>
-  <%= Project::CATEGORIES %>
-  <br></br>
+  <div class="field">
+    <%= f.label :styles %><br>
+    <%= f.select(:style, Project::STYLES) %>
+  </div>
+  <div class="field">
+    <%= f.label :categories %><br>
+    <%= f.select(:category, Project::CATEGORIES) %>
+  </div>
+  
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>

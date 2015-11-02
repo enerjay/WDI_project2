@@ -5,6 +5,8 @@ class CreateProjects < ActiveRecord::Migration
       t.string :date_created
       t.text :info
       t.string :location
+      t.string :style
+      t.string :category
       t.text :video_url
       t.string :image
 

@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20151102113330) do
     t.string   "date_created"
     t.text     "info"
     t.string   "location"
+    t.string   "style"
+    t.string   "category"
     t.text     "video_url"
     t.string   "image"
     t.datetime "created_at",   null: false
