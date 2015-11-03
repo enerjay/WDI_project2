@@ -4,7 +4,16 @@ Rails.application.routes.draw do
   resources :users
   resources :contact
 
-  root "static#home"
+  
+
+  authenticated :user do
+    root to: "users#index", as: :authenticated_root
+  end
+
+  unauthenticated do
+    root to: "static#home", as: :unauthenticated_root
+  end
+
     
   get "Projects", to: "projects#index"
   get "Users", to: "users#index" 

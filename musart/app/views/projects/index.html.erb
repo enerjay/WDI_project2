@@ -23,7 +23,7 @@
         <td><%= project.info %></td>
         <td><%= project.location %></td>
         <td><iframe src="https://www.youtube.com/embed/<%= project.video_url%>" frameborder="0" width = "140" height="80"></iframe></td>
-        <td><%= image_tag project.image %></td>
+        <td><%= image_tag project.image_url(:thumb) %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>

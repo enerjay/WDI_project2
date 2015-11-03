@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   has_many :projects, dependent: :destroy
+  mount_uploader :profile_image, ImageUploader
 end

@@ -22,7 +22,8 @@
 
 <p>
   <strong>Profile image:</strong>
-  <%= @user.profile_image %>
+  <br>
+  <%= image_tag @user.profile_image_url(:thumb).to_s %>
 </p>
 
 <p>
@@ -38,3 +39,4 @@
 <%= link_to 'Add Project', new_project_path %> |
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
