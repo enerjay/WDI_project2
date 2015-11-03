@@ -2,12 +2,26 @@
 
 <h1>Artist Projects</h1>
 
-<table>
+<%= search_form_for @search do |f| %>
+ <div class="field">
+<%= f.label :name_or_category_or_style_cont, "Name contains" %>
+<%= f.text_field :name_or_category_or_style_cont %>
+</div>
+<div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+<%= link_to "Clear Search", request.path, class:"cancel-button" %>
+
+
+
+
+<table border="1">
   <thead>
     <tr>
       <th>Name</th>
       <th>Date created</th>
       <th>Info</th>
+      <th>Category</th>
+      <th>Style</th>
       <th>Location</th>
       <th>Video url</th>
       <th>Image</th>
@@ -21,6 +35,8 @@
         <td><%= project.name %></td>
         <td><%= project.date_created %></td>
         <td><%= project.info %></td>
+        <td><%= project.category %></td>
+        <td><%= project.style %></td>
         <td><%= project.location %></td>
         <td><iframe src="https://www.youtube.com/embed/<%= project.video_url%>" frameborder="0" width = "140" height="80"></iframe></td>
         <td><%= image_tag project.image_url(:thumb) %></td>

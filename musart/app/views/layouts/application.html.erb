@@ -13,18 +13,20 @@
   <%if user_signed_in? %>
     <%= link_to current_user.full_name, current_user%>
     <%= link_to "logout", destroy_user_session_path, method: :delete%>
+    <%= yield(:search) %>
     <p><%= link_to "home", unauthenticated_root_path %></p>
     <p><%= link_to "Artists", users_path %></p>
     <p><%= link_to "Projects", projects_path %></p>
     <p><%= link_to "Contact", contact_index_path %></p>
+
+
+    
   <% else %>
     <%= link_to "Login", new_user_session_path%>
     <%= link_to "Sign up", new_user_registration_path%>
   <% end %>
 
-  <%# STYLES.each_with_index do |i, s|%>
-    <%#=s[i] %>
-  <%# end %>
+  
 
 
   
@@ -33,3 +35,5 @@
 
 </body>
 </html>
+
+

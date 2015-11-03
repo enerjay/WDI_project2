@@ -29,6 +29,7 @@ gem'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'ransack'
+gem 'acts_as_votable'
 
 
 # Use Unicorn as the app server

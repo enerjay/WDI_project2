@@ -4,7 +4,11 @@
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @search = Project.search(params[:q])
+    @projects  = @search.result
+   
+    
+
   end
 
   # GET /projects/1
