@@ -1,5 +1,6 @@
   class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  #before_action :upvote, except: :index
 
   # GET /projects
   # GET /projects.json
@@ -65,7 +66,11 @@
       format.json { head :no_content }
     end
   end
-
+  def upvote 
+    @project = Project.find(params[:id])
+    @project.upvote_by current_user
+    redirect_to :back
+  end  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
@@ -76,4 +81,6 @@
     def project_params
       params.require(:project).permit(:name, :date_created, :info, :location, :video_url, :image, :style, :category)
     end
+    
+
 end

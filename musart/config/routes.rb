@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :users
   resources :contact
 
-  
 
   authenticated :user do
     root to: "users#index", as: :authenticated_root
@@ -18,7 +17,13 @@ Rails.application.routes.draw do
   get "Projects", to: "projects#index"
   get "Users", to: "users#index" 
   get "Contact", to: "contact#index"
-
+  
+  resources :links do 
+    member do
+      put "like", to: "projects#upvote"
+  
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
