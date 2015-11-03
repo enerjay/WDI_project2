@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   belongs_to :user
-
+  mount_uploader :image, ImageUploader #vs ImageUploader
+  
   STYLES = ["Experimental", "Video Mapping", "Drawn on Film", "Figurative", "3D"]
   CATEGORIES = ["Installation", "Video Art", "Music Festival", "Performance", "Music Video", "Dev art"]
   
