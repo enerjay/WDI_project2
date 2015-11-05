@@ -1,31 +1,26 @@
-<h1>Artist Projects</h1>
+<div class="panel-heading"><h1>Artist Projects</h1>
+<div class="col-sm-3 col-md-3 pull-right">
+<form class="navbar-form" role="search">
+<div class="input-group">
 <%= search_form_for @search do |f| %>
-<div class="field">
-  <%= f.label :name_or_category_or_style_cont, "Name contains" %>
+<br>
+<div class="form-group">
+  <%= f.label :name_or_category_or_style_cont, "Name contains", class: "form-control", class: "input-group-btn" %>
   <%= f.text_field :name_or_category_or_style_cont %>
 </div>
-<div class="actions"><%= f.submit "Search" %></div>
+<div class="input-group"><%= f.submit "Search" %></div>
 <% end %>
+<br>
 
 <%= link_to "Clear Search", request.path, class:"cancel-button" %>
+</form>
+</div>
+</div>
+</form>
+</div>
+</div>
 
-
-<% @projects.each do |project| %>
-<h4><%= link_to project.name, project %><br>
-  Submitted <%= time_ago_in_words(project.created_at) %> 
-  by <%= project.user.email %>
-</h4>
-
-<%= link_to like_link_path(project), method: :put do %>
-Upvote
-<%= project.get_upvotes.size %>
-<% end %>
-
-
-<% end %>
-
-
-<table class="table table-hover table-borded">
+<table class="table table-hover table-borded table-condensed">
   <thead>
     <tr>
       <th>Name</th>
@@ -50,7 +45,7 @@ Upvote
       <td><%= project.style %></td>
       <td><%= project.location %></td>
       <td><iframe src="https://www.youtube.com/embed/<%= project.video_url%>" frameborder="0" width = "140" height="80"></iframe></td>
-      <td><%= image_tag project.image_url(:thumb) %></td>
+      <td><%= image_tag project.image_url(:thumb), class: "img-circle" %></td>
       <td><%= link_to 'Show', project %></td>
       <td><%= link_to 'Edit', edit_project_path(project) %></td>
       <td><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -61,7 +56,6 @@ Upvote
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
 
 
 

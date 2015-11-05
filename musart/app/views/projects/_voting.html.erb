@@ -1,0 +1,15 @@
+<%= render 'index' %>
+
+<% @projects.each do |project| %>
+<h4><%= link_to project.name, project %><br>
+  Submitted <%= time_ago_in_words(project.created_at) %> 
+  by <%= project.user.email %>
+</h4>
+
+<%= link_to like_link_path(project), method: :put do %>
+Upvote
+<%= project.get_upvotes.size %>
+<% end %>
+
+
+<% end %>

@@ -1,42 +1,59 @@
-<div class="form">
-<h1>New User</h1>
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="jumbotron artist">
+  <div class="form large">
+    <div class="panel-heading"><h1>Editing Artist</h1><br><br></div>
+    <br>
+    <div class="panel panel-primary">
+      <table class="table">
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <br>
+        <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :username %><br>
+          <%= f.text_field :username, class: "form-control"  %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :full_name %><br>
+          <%= f.text_field :full_name, class: "form-control"%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :bio %><br>
+          <%= f.text_area :bio, class: "form-control"%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, class: "form-control"%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :profile_image %><br>
+          <%= f.file_field :profile_image, class: "form-control"%>
+        </div>
+        <div class="text_links">
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+
+          <% end %>
+          <%= link_to 'Show', @user %> |
+          <%= link_to 'Back', users_path %>
+        </div>
+      </table>
     </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label :username %><br>
-    <%= f.text_field :username, class: "form-control"  %>
   </div>
-  <div class="form-group">
-    <%= f.label :full_name %><br>
-    <%= f.text_field :full_name, class: "form-control"%>
-  </div>
-  <div class="form-group">
-    <%= f.label :bio %><br>
-    <%= f.text_area :bio, class: "form-control"%>
-  </div>
-  <div class="form-group">
-    <%= f.label :email %><br>
-    <%= f.text_field :email, class: "form-control"%>
-  </div>
-  <div class="form-group">
-    <%= f.label :profile_image %><br>
-    <%= f.file_field :profile_image, class: "form-control"%>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
- 
-<% end %>
-<%= link_to 'Back', users_path %>
 </div>
+

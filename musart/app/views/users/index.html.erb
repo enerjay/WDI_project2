@@ -1,16 +1,28 @@
-<h1>Artists</h1>
+<div class="panel-heading"><h1>Artists</h1>
 
+
+<div class="col-sm-3 col-md-3 pull-right">
+<form class="navbar-form" role="search">
+<div class="input-group">
 <%= search_form_for @search do |f| %>
- <div class="field">
-<%= f.label :full_name_cont, "Name contains" %>
+<br>
+<div class="form-group">
+<%= f.label :full_name_cont, "Name contains", class: "form-control", class: "input-group-btn" %>
 <%= f.text_field :full_name_cont %>
 </div>
-<div class="actions"><%= f.submit "Search" %></div>
+<div class="input-group"><%= f.submit "Search" %></div>
 <% end %>
-
+<br>
 <%= link_to "Clear Search", request.path, class:"cancel-button" %>
+</form>
+</div>
+</div>
+</form>
+</div>
+</div>
 
-<table class="table table-hover">
+
+<table class="table table-hover table-hover table-borded table-condensed">
   <thead>
     <tr>
       <th>Username</th>
@@ -29,7 +41,7 @@
         <td><%= user.full_name %></td>
         <td><%= user.bio %></td>
         <td><%= user.email %></td>
-        <td><%= image_tag user.profile_image_url(:thumb).to_s %></td>
+        <td><%= image_tag user.profile_image_url(:thumb).to_s , class: "img-circle" %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -40,7 +52,7 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+
 
 
 

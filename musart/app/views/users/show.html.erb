@@ -1,51 +1,57 @@
 <div class="jumbotron artist">
-<div class="form">
-  <div class="panel panel-default">
-    <div class="panel-heading">Artist<br><br><br><br></div>
-    <table class="table">
-      <div class="row">
-        <div class="profile_pic"><%= image_tag @user.profile_image_url(:thumb).to_s %></div> 
-      </div>
-      <div class="form-control">
-        <strong>Username:</strong>
-        <%= @user.username %>
-      </div>
+  <div class="form">
+    <div class="panel-heading"><h1>Artist</h1><br><br></div>
     <br>
-      <div class="form-control">
-        <strong>Full name:</strong>
-        <%= @user.full_name %>
-      </div>
-      <br>
+    <div class="panel panel-primary">
+      <table class="table">
+        <div class="row">
+          <br>
+          <div class="profile_pic"><%= image_tag @user.profile_image_url(:thumb).to_s %></div> 
+        </div>
+        <div class="form-control">
+          <strong>Username:</strong>
+          <%= @user.username %>
+        </div>
+        <br>
+        <div class="form-control">
+          <strong>Full name:</strong>
+          <%= @user.full_name %>
+        </div>
+        <br>
 
-      <div class="bio_text">
-        <strong>Bio:</strong>
-        <%= @user.bio %>
-      </div>
-      <br>
+        <div class="bio_text">
+          <strong>Bio:</strong>
+          <%= @user.bio %>
+        </div>
+        <br>
 
-      <div class="form-control">
-        <strong>Email:</strong>
-        <%= @user.email %>
-      </div>
-      <br>
+        <div class="form-control">
+          <strong>Email:</strong>
+          <%= @user.email %>
+        </div>
+        <br>
 
-      <div class="form-control">
-        <strong>Projects:</strong>
+        <div class="form-control">
+          <strong>Projects:</strong>
           <% @user.projects.each do |project| %>
           <%= link_to project.name, project %>
           <% end %>
+        </div>
+
+
       </div>
+      <br>
+      <div class="text_links">
 
-    </table>
+        <%= link_to 'All Projects', projects_path %> |
+        <%= link_to 'Add Project', new_project_path %> |
+        <%= link_to 'Edit', edit_user_path(@user) %> |
+        <%= link_to 'Back', users_path %>
+        <br>
+        <br>
+      </div>
+    </div>
   </div>
-
-  <div class="text_links"
-  <%= link_to 'All Projects', projects_path %> |
-  <%= link_to 'Add Project', new_project_path %> |
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
-</div>
-</div>
-</div>
+</table>
 
 

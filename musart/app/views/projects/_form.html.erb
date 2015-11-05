@@ -1,54 +1,67 @@
 <div class="jumbotron project">
-<div class="form">
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+  <div class="form">
+    <div class="panel-heading"><h1>Editing Project</h1><br><br></div>
+    <br>
+    <div class="panel panel-primary">
+      <table class="table">
+        <br>
+        <%= form_for(@project) do |f| %>
+        <% if @project.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
-      <ul>
-      <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @project.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
 
-  <div class="form-group">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :date_created %><br>
-    <%= f.text_field :date_created, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :info %><br>
-    <%= f.text_area :info, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :location %><br>
-    <%= f.text_field :location, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :video_url %><br>
-    <%= f.text_field :video_url, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :image %><br>
-    <%= f.file_field :image, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :styles %><br>
-    <%= f.select(:style, Project::STYLES) %>
-  </div>
-  
-  <div class="form-group">
-    <%= f.label :categories %><br>
-    <%= f.select(:category, Project::CATEGORIES) %>
-  </div>
-  
-  <br></br>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+        <div class="form-group">
+          <%= f.label :name %><br>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :date_created %><br>
+          <%= f.text_field :date_created, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :info %><br>
+          <%= f.text_area :info, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :location %><br>
+          <%= f.text_field :location, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :video_url %><br>
+          <%= f.text_field :video_url, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :image %><br>
+          <%= f.file_field :image, class: "form-control" %>
+        </div>
+        
+        <div class="text_links">
+          <div class="form-group">
+            <%= f.label :styles %><br>
+            <%= f.select(:style, Project::STYLES) %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :categories %><br>
+            <%= f.select(:category, Project::CATEGORIES) %>
+          </div>
+
+          <br></br>
+
+          <div class="actions">
+            <%= f.submit %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
