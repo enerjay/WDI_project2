@@ -10,4 +10,3 @@ class Project < ActiveRecord::Base
   validates_inclusion_of :style, :in => STYLES
   validates_inclusion_of :category, :in => CATEGORIES
 end
-  

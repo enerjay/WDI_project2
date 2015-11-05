@@ -30,6 +30,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'ransack'
 gem 'acts_as_votable'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 
 # Use Unicorn as the app server

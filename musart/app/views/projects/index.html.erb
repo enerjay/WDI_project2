@@ -1,7 +1,4 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Artist Projects</h1>
-
 <%= search_form_for @search do |f| %>
 <div class="field">
   <%= f.label :name_or_category_or_style_cont, "Name contains" %>
@@ -28,7 +25,7 @@ Upvote
 <% end %>
 
 
-<table border="1">
+<table class="table table-hover table-borded">
   <thead>
     <tr>
       <th>Name</th>
