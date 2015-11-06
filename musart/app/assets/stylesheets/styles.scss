@@ -1,4 +1,6 @@
-
+* {
+  font-family: 'Dosis' sans-serif;
+}
 p {
   font-family: 'Dosis' sans-serif;
   letter-spacing: 3px;
@@ -39,6 +41,10 @@ h1 {
   color: #ffffff;
 }
 
+.navbar-default {
+  background-color: black; 
+  
+}
 .home {
   width: 100vw;
   height:100vw;
@@ -46,14 +52,8 @@ h1 {
   background-image: url("sun8.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
-  // color: white;
 }
 
-
-.navbar-inner {
-  background:transparent;
-  height: 50px;
-}
 
 .sign_up {
   width: 500px;
@@ -97,6 +97,9 @@ h1 {
   width: 600px;
   margin: 0 auto;
   padding: 20px;
+}
+.container-fluid {
+  background-color: black;
 }
 
 .small {
