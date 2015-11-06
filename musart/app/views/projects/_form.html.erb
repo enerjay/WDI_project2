@@ -3,7 +3,7 @@
     <div class="panel-heading"><h1>Editing Project</h1><br><br></div>
     <br>
     <div class="panel panel-primary">
-      <table class="table">
+     
         <br>
         <%= form_for(@project) do |f| %>
         <% if @project.errors.any? %>
@@ -45,7 +45,7 @@
           <%= f.file_field :image, class: "form-control" %>
         </div>
         
-        <div class="text_links">
+        
           <div class="form-group">
             <%= f.label :styles %><br>
             <%= f.select(:style, Project::STYLES) %>
@@ -57,11 +57,8 @@
           </div>
 
           <br></br>
-
-          <div class="actions">
-            <%= f.submit %>
-            <% end %>
-          </div>
-        </div>
-      </div>
+            <div class="actions">
+              <%= f.submit %>
+            </div>
+          <% end %>
 

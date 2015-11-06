@@ -3,8 +3,6 @@
     <div class="panel-heading"><h1>Editing Artist</h1><br><br></div>
     <br>
     <div class="panel panel-primary">
-      <table class="table">
-
         <br>
         <%= form_for(@user) do |f| %>
         <% if @user.errors.any? %>
@@ -43,17 +41,17 @@
           <%= f.label :profile_image %><br>
           <%= f.file_field :profile_image, class: "form-control"%>
         </div>
-        <div class="text_links">
+        
           <div class="actions">
             <%= f.submit %>
           </div>
-
           <% end %>
-          <%= link_to 'Show', @user %> |
-          <%= link_to 'Back', users_path %>
-        </div>
-      </table>
-    </div>
-  </div>
-</div>
+         
+        
+         
+       
+     
+    
+  
+
 
