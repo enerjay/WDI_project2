@@ -21,7 +21,7 @@ this site will focus on:
 - Music Video
 - Dev art
 
-This site is built using the following tools:
+####This site is built using the following tools:
 
 1. Ruby on Rails as the back end framework
 2. Carrierwave gem for uploading images
