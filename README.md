@@ -11,7 +11,7 @@ This is a site developed to build an online community of artists who work with v
 - Figurative
 - 3D
 
-####this site will focus on:
+####This site will focus on:
 
 Artists who work with visuals and sound and deliver to the following range of enviorments: 
 
