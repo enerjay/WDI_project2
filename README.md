@@ -34,6 +34,14 @@ This site is built using the following tools:
 ####User Story
 Artists can signup, create a profile and then are able to upload projects - work they have done. They can write information about the project embed videos and upload stills. Once you are a member of the community you can view other artists work and view there profiles for networking, collaberating purposes. Please see my preparation work including tables and wireframes.
 
+####Wireframes
+
+![image](https://github.com/enerjay/WDI_project2/blob/master/images/Musart_wrieframes.png)
+
+
+####ER diagram
+![image](https://github.com/enerjay/WDI_project2/blob/master/wireframes_er_diagram/Musart_ER.png)
+
 
 
 
