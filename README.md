@@ -1,5 +1,5 @@
 #MUSART
-
+![image](https://github.com/enerjay/WDI_project2/blob/master/images/screen.png)
 http://musart.herokuapp.com/
 
 This is a site developed to build an online community of artists who work with visuals and sound primarily using sound as a focus in the work. I am foocusing on work in the following categories:
@@ -41,6 +41,9 @@ Artists can signup, create a profile and then are able to upload projects - work
 
 ####ER diagram
 ![image](https://github.com/enerjay/WDI_project2/blob/master/wireframes_er_diagram/Musart_ER.png)
+
+####Login screen
+![image](https://github.com/enerjay/WDI_project2/blob/master/images/login.png)
 
 
 
