@@ -1,4 +1,5 @@
 #MUSART
+![image](https://github.com/enerjay/WDI_project2/blob/master/images/screen.png)
 
 http://musart.herokuapp.com/
 
@@ -20,7 +21,7 @@ this site will focus on:
 - Music Video
 - Dev art
 
-This site is built using the following tools:
+####This site is built using the following tools:
 
 1. Ruby on Rails as the back end framework
 2. Carrierwave gem for uploading images
@@ -38,9 +39,11 @@ Artists can signup, create a profile and then are able to upload projects - work
 
 ![image](https://github.com/enerjay/WDI_project2/blob/master/images/Musart_wrieframes.png)
 
-
 ####ER diagram
 ![image](https://github.com/enerjay/WDI_project2/blob/master/wireframes_er_diagram/Musart_ER.png)
+
+####Login screen
+![image](https://github.com/enerjay/WDI_project2/blob/master/images/login.png)
 
 
 
