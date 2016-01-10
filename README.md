@@ -40,7 +40,7 @@ Artists can signup, create a profile and then are able to upload projects - work
 
 
 ####ER diagram
-![image](
+![image](https://github.com/enerjay/WDI_project2/blob/master/wireframes_er_diagram/Musart_ER.png)
 
 
 
